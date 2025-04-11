@@ -34,7 +34,7 @@ def test_db_after_submit():
     """测试数据上报后是否能正确写入数据库"""
     # 1. 上报数据
     client = HttpClient()
-    test_data = {"systolic": 120, "diastolic": 80}  # 使用唯一值便于验证
+    test_data = {"systolic": 190, "diastolic": 100}  # 使用唯一值便于验证
     response = client.post("/api/bloodpressure", test_data)
     assert response.status_code == 200  # 确保接口调用成功
 
